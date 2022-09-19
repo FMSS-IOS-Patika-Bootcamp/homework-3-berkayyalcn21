@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Line 1.png",
+      "filename" : "clarity_image-gallery-solid.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Line 1@2x.png",
+      "filename" : "clarity_image-gallery-solid@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Line 1@3x.png",
+      "filename" : "clarity_image-gallery-solid@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

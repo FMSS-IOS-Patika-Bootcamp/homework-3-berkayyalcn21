@@ -19,17 +19,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dk-Zi-VLq">
-                        <rect key="frame" x="16" y="0.0" width="308" height="102"/>
+                        <rect key="frame" x="16" y="10" width="308" height="77"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKU-yo-dIv">
-                                <rect key="frame" x="8" y="8" width="292" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKU-yo-dIv">
+                                <rect key="frame" x="8" y="8.0000000000000018" width="292" height="21.666666666666671"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00E-cd-LFp">
-                                <rect key="frame" x="8" y="39" width="292" height="55"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00E-cd-LFp">
+                                <rect key="frame" x="8" y="39.666666666666664" width="292" height="29.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -48,15 +48,15 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="3dk-Zi-VLq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ZHw-rg-UPG"/>
+                    <constraint firstItem="3dk-Zi-VLq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ZHw-rg-UPG"/>
                     <constraint firstItem="3dk-Zi-VLq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="bBr-fN-Hr3"/>
-                    <constraint firstAttribute="bottom" secondItem="3dk-Zi-VLq" secondAttribute="bottom" id="l6y-E8-QjC"/>
+                    <constraint firstAttribute="bottom" secondItem="3dk-Zi-VLq" secondAttribute="bottom" constant="15" id="l6y-E8-QjC"/>
                     <constraint firstAttribute="trailing" secondItem="3dk-Zi-VLq" secondAttribute="trailing" constant="16" id="t1F-3H-yWy"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="containerView" destination="H2p-sc-9uM" id="DWF-lX-38o"/>
+                <outlet property="containerView" destination="3dk-Zi-VLq" id="vtb-6k-SaB"/>
                 <outlet property="postDescLabel" destination="00E-cd-LFp" id="UjL-82-yXa"/>
                 <outlet property="postTitleLabel" destination="yKU-yo-dIv" id="28j-9E-WK2"/>
             </connections>

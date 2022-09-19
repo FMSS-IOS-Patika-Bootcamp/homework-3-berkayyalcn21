@@ -15,7 +15,7 @@ class WelcomeVC: UIViewController {
     }
 
     @IBAction func goOnButtonTapped(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "PostListViewController") as! PostListViewController
+        let controller = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
         navigationController?.pushViewController(controller, animated: true)
     }
 }

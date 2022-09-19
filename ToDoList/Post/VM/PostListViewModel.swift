@@ -10,6 +10,8 @@ import Foundation
 protocol PostListViewModelViewProtocol: AnyObject {
     
     func didCellItemFetch(_ items: [PostCellViewModel])
+    func showEmptyView()
+    func hideEmptyView()
 }
 
 
@@ -27,7 +29,8 @@ class PostListViewModel {
     }
     
     func didClickItem(at index: Int) {
-        // Todo:
+        let selectedItem = model.posts[index]
+        // TODO: NAVIGATE
     }
 }
 
@@ -35,18 +38,23 @@ class PostListViewModel {
 private extension PostListViewModel {
     
     @discardableResult
-    func makeViewBasedModel() -> [PostCellViewModel] {
-        return []
+    func makeViewBasedModel(_ posts: [Post]) -> [PostCellViewModel] {
+        return posts.map { .init(title: $0.title, desc: $0.body)}
     }
 }
 
 // MARK: - PostListModelViewModelProtocol
 extension PostListViewModel: PostListModelViewModelProtocol {
     
-    func didDataFetch() {
-        // Todo:
+    func didDataFetchProcessFinish(_ isSuccess: Bool) {
         
-        viewDelegate?.didCellItemFetch(makeViewBasedModel())
-        makeViewBasedModel()
+        if isSuccess {
+            let posts = model.posts
+            let cellModels = makeViewBasedModel(posts)
+            viewDelegate?.didCellItemFetch(cellModels)
+            viewDelegate?.hideEmptyView()
+        }else {
+            viewDelegate?.showEmptyView()
+        }
     }
 }

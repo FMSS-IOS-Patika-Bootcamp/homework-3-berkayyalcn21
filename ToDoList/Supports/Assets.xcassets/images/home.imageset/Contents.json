@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Line 1.png",
+      "filename" : "bx_home-smile.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Line 1@2x.png",
+      "filename" : "bx_home-smile@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Line 1@3x.png",
+      "filename" : "bx_home-smile@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

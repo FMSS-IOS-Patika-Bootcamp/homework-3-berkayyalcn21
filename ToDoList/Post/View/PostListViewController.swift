@@ -38,7 +38,17 @@ extension PostListViewController: PostListViewModelViewProtocol {
     
     func didCellItemFetch(_ items: [PostCellViewModel]) {
         self.items = items
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    func showEmptyView() {
+        // TODO:
+    }
+    
+    func hideEmptyView() {
+        // TODO:
     }
 }
 
@@ -46,6 +56,7 @@ extension PostListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didClickItem(at: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -57,8 +68,8 @@ extension PostListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostListTableViewCell") as! PostListTableViewCell
-        cell.postTitleLabel.text = items[indexPath.row].title
-        cell.postTitleLabel.text = items[indexPath.row].desc
+        cell.postTitleLabel.text = items[indexPath.row].title?.capitalized
+        cell.postDescLabel.text = items[indexPath.row].desc
         return cell
     }
     
