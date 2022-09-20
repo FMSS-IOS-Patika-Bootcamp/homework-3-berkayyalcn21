@@ -78,10 +78,10 @@ extension GalleryVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: (collectionView.frame.width - 50) / listTypeNumber, height: 150)
+        return .init(width: (collectionView.frame.width - 50) / listTypeNumber, height: 100)
     }
 }
