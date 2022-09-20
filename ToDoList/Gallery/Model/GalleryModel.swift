@@ -1,28 +1,29 @@
 //
-//  PostListModel.swift
+//  Model.swift
 //  ToDoList
 //
-//  Created by Berkay on 19.09.2022.
+//  Created by Berkay on 20.09.2022.
 //
 
 import Foundation
 
-protocol PostListModelViewModelProtocol: AnyObject {
+protocol GalleryModelToViewModelProtocol: AnyObject {
     
-    func didDataFetchProcessFinish(_ isSuccess: Bool)
+    func didDataFetchProccesFinish(_ isSuccess: Bool)
 }
 
-class PostListModel {
+class GalleryModel {
     
-    weak var delegate: PostListModelViewModelProtocol?
-    var posts: [Post] = []
+    weak var delegate: GalleryModelToViewModelProtocol?
+    var photos: [Photos] = []
     
     func fetchData() {
         
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else {
-            delegate?.didDataFetchProcessFinish(false)
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/photos") else {
+            delegate?.didDataFetchProccesFinish(false)
             return
         }
+        
         var request: URLRequest = .init(url: url)
         request.httpMethod = "GET"
         
@@ -31,7 +32,7 @@ class PostListModel {
             guard let self = self else { return }
             
             guard error == nil else {
-                self.delegate?.didDataFetchProcessFinish(false)
+                self.delegate?.didDataFetchProccesFinish(false)
                 return
             }
             
@@ -40,25 +41,23 @@ class PostListModel {
             guard
                 statusCode >= 200,
                 statusCode < 300 else {
-                self.delegate?.didDataFetchProcessFinish(false)
+                self.delegate?.didDataFetchProccesFinish(false)
                 return
             }
             
             guard let data = data else {
-                self.delegate?.didDataFetchProcessFinish(false)
+                self.delegate?.didDataFetchProccesFinish(false)
                 return
             }
             
             do {
                 let jsonDecoder = JSONDecoder()
-                self.posts = try jsonDecoder.decode([Post].self, from: data)
-                self.delegate?.didDataFetchProcessFinish(true)
+                self.photos = try jsonDecoder.decode([Photos].self, from: data)
+                self.delegate?.didDataFetchProccesFinish(true)
             }catch {
-                self.delegate?.didDataFetchProcessFinish(false)
+                self.delegate?.didDataFetchProccesFinish(false)
             }
-            
         }
-        
         task.resume()
     }
 }

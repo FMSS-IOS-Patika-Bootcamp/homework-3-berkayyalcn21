@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F07741AB28D992ED00D7C9A8 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07741AA28D992ED00D7C9A8 /* GalleryVC.swift */; };
+		F07741AD28D9930600D7C9A8 /* GalleryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07741AC28D9930600D7C9A8 /* GalleryVM.swift */; };
+		F07741AF28D9931A00D7C9A8 /* GalleryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07741AE28D9931A00D7C9A8 /* GalleryEntity.swift */; };
+		F07741B128D9932000D7C9A8 /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07741B028D9932000D7C9A8 /* GalleryModel.swift */; };
+		F07741B428D9934F00D7C9A8 /* GalleryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07741B228D9934F00D7C9A8 /* GalleryCollectionView.swift */; };
+		F07741B528D9934F00D7C9A8 /* GalleryCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07741B328D9934F00D7C9A8 /* GalleryCollectionView.xib */; };
+		F07741B828D9ACFC00D7C9A8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F07741B728D9ACFC00D7C9A8 /* Kingfisher */; };
 		F091D01628D8608900BC9A23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091D01528D8608900BC9A23 /* AppDelegate.swift */; };
 		F091D01828D8608900BC9A23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091D01728D8608900BC9A23 /* SceneDelegate.swift */; };
 		F091D01A28D8608900BC9A23 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091D01928D8608900BC9A23 /* PostListViewController.swift */; };
@@ -24,6 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F07741AA28D992ED00D7C9A8 /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
+		F07741AC28D9930600D7C9A8 /* GalleryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVM.swift; sourceTree = "<group>"; };
+		F07741AE28D9931A00D7C9A8 /* GalleryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryEntity.swift; sourceTree = "<group>"; };
+		F07741B028D9932000D7C9A8 /* GalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
+		F07741B228D9934F00D7C9A8 /* GalleryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
+		F07741B328D9934F00D7C9A8 /* GalleryCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionView.xib; sourceTree = "<group>"; };
 		F091D01228D8608900BC9A23 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F091D01528D8608900BC9A23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F091D01728D8608900BC9A23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,12 +60,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F07741B828D9ACFC00D7C9A8 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F07741A728D992B400D7C9A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F07741AA28D992ED00D7C9A8 /* GalleryVC.swift */,
+				F07741B228D9934F00D7C9A8 /* GalleryCollectionView.swift */,
+				F07741B328D9934F00D7C9A8 /* GalleryCollectionView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F07741A828D992C400D7C9A8 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				F07741AC28D9930600D7C9A8 /* GalleryVM.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		F07741A928D992CF00D7C9A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F07741B028D9932000D7C9A8 /* GalleryModel.swift */,
+				F07741AE28D9931A00D7C9A8 /* GalleryEntity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F091D00928D8608900BC9A23 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +177,9 @@
 		F091D03F28D8FFA900BC9A23 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				F07741A728D992B400D7C9A8 /* View */,
+				F07741A828D992C400D7C9A8 /* VM */,
+				F07741A928D992CF00D7C9A8 /* Model */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -163,6 +207,9 @@
 			dependencies = (
 			);
 			name = ToDoList;
+			packageProductDependencies = (
+				F07741B728D9ACFC00D7C9A8 /* Kingfisher */,
+			);
 			productName = ToDoList;
 			productReference = F091D01228D8608900BC9A23 /* ToDoList.app */;
 			productType = "com.apple.product-type.application";
@@ -191,6 +238,9 @@
 				Base,
 			);
 			mainGroup = F091D00928D8608900BC9A23;
+			packageReferences = (
+				F07741B628D9ACFC00D7C9A8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = F091D01328D8608900BC9A23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -209,6 +259,7 @@
 				F091D02228D8608900BC9A23 /* Assets.xcassets in Resources */,
 				F091D01D28D8608900BC9A23 /* Main.storyboard in Resources */,
 				F091D03928D8943C00BC9A23 /* PostListTableViewCell.xib in Resources */,
+				F07741B528D9934F00D7C9A8 /* GalleryCollectionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,12 +273,17 @@
 				F091D01A28D8608900BC9A23 /* PostListViewController.swift in Sources */,
 				F091D03328D88E3900BC9A23 /* PostListModel.swift in Sources */,
 				F091D03828D8943C00BC9A23 /* PostListTableViewCell.swift in Sources */,
+				F07741B428D9934F00D7C9A8 /* GalleryCollectionView.swift in Sources */,
 				F091D03D28D8DBD000BC9A23 /* TabBarController.swift in Sources */,
+				F07741AB28D992ED00D7C9A8 /* GalleryVC.swift in Sources */,
 				F091D02D28D884DA00BC9A23 /* WelcomeVC.swift in Sources */,
 				F091D03128D88D8200BC9A23 /* PostListViewModel.swift in Sources */,
+				F07741B128D9932000D7C9A8 /* GalleryModel.swift in Sources */,
 				F091D01628D8608900BC9A23 /* AppDelegate.swift in Sources */,
 				F091D01828D8608900BC9A23 /* SceneDelegate.swift in Sources */,
 				F091D03528D8923A00BC9A23 /* PostListEntity.swift in Sources */,
+				F07741AF28D9931A00D7C9A8 /* GalleryEntity.swift in Sources */,
+				F07741AD28D9930600D7C9A8 /* GalleryVM.swift in Sources */,
 				F091D02028D8608900BC9A23 /* ToDoList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +504,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F07741B628D9ACFC00D7C9A8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F07741B728D9ACFC00D7C9A8 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F07741B628D9ACFC00D7C9A8 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F091D01E28D8608900BC9A23 /* ToDoList.xcdatamodeld */ = {

@@ -118,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="1988" y="336"/>
         </scene>
-        <!--View Controller-->
+        <!--GalleryVC-->
         <scene sceneID="cz7-6t-i6i">
             <objects>
-                <viewController id="TGc-4Q-7OF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GalleryVC" id="TGc-4Q-7OF" customClass="GalleryVC" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V5y-Mq-7Do">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,6 +130,9 @@
                                 <rect key="frame" x="16" y="47" width="54" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="category"/>
+                                <connections>
+                                    <action selector="listTypeButtonTapped:" destination="TGc-4Q-7OF" eventType="touchUpInside" id="dmD-3C-NL3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GALLERY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6b-6G-E9F">
                                 <rect key="frame" x="150.66666666666666" y="57" width="88.666666666666657" height="24"/>
@@ -146,7 +149,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7fm-py-72h">
                                 <rect key="frame" x="0.0" y="102.33333333333331" width="390" height="658.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wor-wH-Jhj">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wor-wH-Jhj">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -174,6 +177,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="gallerySelected" selectedImage="gallery" id="WUZ-7M-F2p"/>
+                    <connections>
+                        <outlet property="galleryCollectionView" destination="7fm-py-72h" id="nFb-7v-YtQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLu-p4-pEg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -267,6 +273,7 @@
                 <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="mB0-qa-wmZ" customClass="TabBarController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v11-NT-pT2">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
