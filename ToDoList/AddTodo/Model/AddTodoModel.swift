@@ -8,23 +8,20 @@
 import Foundation
 import CoreData
 
-protocol AddTodoToViewModelProtocol: AnyObject {
-    
-    func didDataFetchProccesFinish(_ isSuccess: Bool)
-}
-
 class AddTodoModel {
     
-    weak var delegate: AddTodoToViewModelProtocol?
-    var todos: [Todos] = []
-    
-    func postData(_ title: String, _ desc: String, _ date: String) {
+    func post(title: String, desc: String, date: String, isCompleted: Bool) {
         
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        let context = appDelegate.persistentContainer.viewContext
-//        
+        let managedContext = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
+        let data = Todo(context: managedContext)
+
+        data.setValue(UUID(), forKey: "id")
+        data.setValue(title, forKey: #keyPath(Todo.todo))
+        data.setValue(desc, forKey: #keyPath(Todo.desc))
+        data.setValue(date, forKey: #keyPath(Todo.date))
+        data.setValue(isCompleted, forKey: #keyPath(Todo.isCompleted))
+        data.setValue(Date(), forKey: #keyPath(Todo.sorter))
+
+        AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
     }
-    
-    
-    
 }

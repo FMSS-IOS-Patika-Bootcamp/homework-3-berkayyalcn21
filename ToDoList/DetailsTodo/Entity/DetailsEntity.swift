@@ -1,16 +1,16 @@
 //
-//  AddTodoEntity.swift
+//  Entity.swift
 //  ToDoList
 //
-//  Created by Berkay on 20.09.2022.
+//  Created by Berkay on 22.09.2022.
 //
 
 import Foundation
 
 
-struct Todos {
+class DetailsEntity {
     
-    var id: Int?
+    var id: UUID?
     var todo: String?
     var desc: String?
     var date: String?

@@ -85,8 +85,8 @@
                                     <action selector="dateFilterTodoButtonTapped:" destination="mbU-B3-Ikd" eventType="touchUpInside" id="4GY-6n-T08"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krn-gO-HFn">
-                                <rect key="frame" x="166.66666666666666" y="57" width="56.666666666666657" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO DO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krn-gO-HFn">
+                                <rect key="frame" x="164.66666666666666" y="57" width="61" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -448,6 +448,7 @@
                     <connections>
                         <outlet property="dateTextField" destination="KKU-Ey-HGn" id="COH-OC-ZGI"/>
                         <outlet property="descTextView" destination="Iff-YR-gvs" id="qUu-y0-NUS"/>
+                        <outlet property="isCompletedButton" destination="09V-gu-5HB" id="q0Q-Vc-OZ8"/>
                         <outlet property="titleTextField" destination="6aj-Te-uF7" id="KhP-ew-6Sw"/>
                     </connections>
                 </viewController>

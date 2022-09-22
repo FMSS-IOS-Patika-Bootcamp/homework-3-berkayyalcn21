@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import CoreData
 
 
 class AddTodoVM {
     
-    private let model = AddTodoModel()
+    let model = AddTodoModel()
     
-    func sendData(_ title: String, _ desc: String, _ date: String) {
-        model.postData(title, desc, date)
+    func sendDataPost(_ title: String, _ desc: String, _ date: String, _ isCompleted: Bool) {
+        model.post(title: title, desc: desc, date: date, isCompleted: isCompleted)
     }
 }

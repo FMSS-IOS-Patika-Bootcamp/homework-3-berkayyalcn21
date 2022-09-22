@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+
+class DetailsTodoVM {
+    
+    private let model = DetailsTodoModel()
+    
+    func sendDataUpdate(todo: Todo) {
+        model.update(todo: todo)
+    }
+}

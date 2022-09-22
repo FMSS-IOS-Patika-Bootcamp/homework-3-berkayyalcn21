@@ -14,7 +14,7 @@ class AddTodoVC: UIViewController {
     @IBOutlet weak var descTextView: UITextView!
     @IBOutlet weak var dateTextField: UITextField!
     private let viewModel = AddTodoVM()
-    private var todos: [Todos]?
+    private let model = AddTodoModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,8 @@ class AddTodoVC: UIViewController {
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         if titleTextField.text != "" && descTextView.text != "" && dateTextField.text != "" {
-            viewModel.sendData(titleTextField.text!, descTextView.text!, dateTextField.text!)
+            viewModel.sendDataPost(titleTextField.text!, descTextView.text!, dateTextField.text!, false)
+            navigationController?.popViewController(animated: true)
         }
     }
     
