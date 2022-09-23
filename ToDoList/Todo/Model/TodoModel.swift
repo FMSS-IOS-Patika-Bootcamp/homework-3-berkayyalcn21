@@ -28,8 +28,10 @@ class TodoModel {
         }
     }
     
-    func delete(indexPath: IndexPath) {
+    func delete(indexPath: Int, todos: [Todo]) {
+        var todo = todos
         let context = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
-        
+        context.delete(todo[indexPath])
+        AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
     }
 }

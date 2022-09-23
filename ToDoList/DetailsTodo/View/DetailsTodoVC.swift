@@ -15,7 +15,7 @@ class DetailsTodoVC: UIViewController {
     @IBOutlet weak var dateTextField: UITextField!
     var todo: Todo?
     private let viewModel = DetailsTodoVM()
-    private var check: Bool = false
+    private var check: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +24,14 @@ class DetailsTodoVC: UIViewController {
             titleTextField.text = todo?.todo
             descTextView.text = todo?.desc
             dateTextField.text = todo?.date
+            check = todo?.isCompleted != nil
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         checkCompleted()
     }
+    
 
     @IBAction func backButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
@@ -39,12 +41,14 @@ class DetailsTodoVC: UIViewController {
         
         if todo != nil {
             viewModel.sendDataUpdate(todo: todo!)
-            if check {
+            if todo?.isCompleted == true {
                 check = false
                 isCompletedButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+                checkCompleted()
             }else {
                 check = true
                 isCompletedButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+                checkCompleted()
             }
         }
     }

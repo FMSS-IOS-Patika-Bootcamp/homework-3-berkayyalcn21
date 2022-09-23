@@ -16,4 +16,8 @@ class TodoViewModel {
         let todos = model.get()
         return todos
     }
+    
+    func sendDataDelete(indexPath: Int, todos: [Todo]) {
+        model.delete(indexPath: indexPath, todos: todos)
+    }
 }

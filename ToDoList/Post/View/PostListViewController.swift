@@ -12,7 +12,8 @@ class PostListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private let viewModel = PostListViewModel()
     private var items: [PostCellViewModel] = []
-    
+    @IBOutlet weak var colorWell: UIColorWell!
+    private var newColor: UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class PostListViewController: UIViewController {
         setupUI()
         viewModel.viewDelegate = self
         viewModel.didViewLoad()
+        colorWell.addTarget(self, action: #selector(colorChanged), for: .valueChanged)
     }
     
     func setupUI() {
@@ -31,7 +33,22 @@ class PostListViewController: UIViewController {
     func registerCell() {
         tableView.register(.init(nibName: "PostListTableViewCell", bundle: nil), forCellReuseIdentifier: "PostListTableViewCell")
     }
-
+    
+    @objc func colorChanged() {
+        newColor = colorWell.selectedColor
+        let appearance = UITabBarAppearance()
+        appearance.backgroundColor = newColor
+        tabBarColor(itemAppearance: appearance.stackedLayoutAppearance)
+        tabBarColor(itemAppearance: appearance.inlineLayoutAppearance)
+        tabBarColor(itemAppearance: appearance.compactInlineLayoutAppearance)
+        tabBarController?.tabBar.standardAppearance = appearance
+        tabBarController?.tabBar.scrollEdgeAppearance = appearance
+    }
+    
+    func tabBarColor(itemAppearance: UITabBarItemAppearance) {
+        // Selected status
+        itemAppearance.selected.iconColor = newColor
+    }
 }
 
 extension PostListViewController: PostListViewModelViewProtocol {

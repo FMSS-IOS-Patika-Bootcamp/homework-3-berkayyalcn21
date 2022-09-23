@@ -40,11 +40,6 @@ class TodoVC: UIViewController {
         let addTodoVC = storyboard?.instantiateViewController(withIdentifier: "AddTodoVC") as! AddTodoVC
         navigationController?.pushViewController(addTodoVC, animated: true)
     }
-    
-    @IBAction func dateFilterTodoButtonTapped(_ sender: Any) {
-    }
-    
-    
 }
 
 
@@ -84,11 +79,9 @@ extension TodoVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Sil") { action, indexPaht, void  in
+        let deleteAction = UIContextualAction(style: .destructive, title: "Sil") { action, indexPahtt, void  in
             
-            let context = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
-            context.delete(self.todos[indexPath.row])
-            AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
+            self.todoVM.sendDataDelete(indexPath: indexPath.row, todos: self.todos)
             self.todos.remove(at: indexPath.row)
             tableView.reloadData()
         }

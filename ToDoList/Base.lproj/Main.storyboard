@@ -18,11 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Up9-zw-Rqn">
-                                <rect key="frame" x="16" y="47" width="54" height="44"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="listButton"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRp-w6-chr">
                                 <rect key="frame" x="168.66666666666666" y="57" width="53" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -39,20 +34,23 @@
                                 <rect key="frame" x="0.0" y="112.33333333333331" width="390" height="648.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <colorWell contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jD6-RD-VE5">
+                                <rect key="frame" x="16" y="55" width="28" height="28"/>
+                            </colorWell>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RAG-6w-5WL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="4IL-Rg-aan"/>
-                            <constraint firstItem="Up9-zw-Rqn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4xn-Gg-3TF"/>
                             <constraint firstItem="jFR-Uj-3Ns" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BIW-H3-exW"/>
-                            <constraint firstItem="jFR-Uj-3Ns" firstAttribute="top" secondItem="Up9-zw-Rqn" secondAttribute="bottom" constant="10" id="H3u-Xq-BnO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Se-hz-zDm" secondAttribute="trailing" id="HFs-3E-cgb"/>
-                            <constraint firstItem="Up9-zw-Rqn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KiE-bT-Qar"/>
+                            <constraint firstItem="jD6-RD-VE5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Lui-9c-kMp"/>
+                            <constraint firstItem="jD6-RD-VE5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="N5p-LV-N3V"/>
                             <constraint firstItem="8Se-hz-zDm" firstAttribute="top" secondItem="jFR-Uj-3Ns" secondAttribute="bottom" constant="10" id="RQH-Mk-ld5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Se-hz-zDm" secondAttribute="bottom" id="RfA-iS-zZL"/>
                             <constraint firstItem="kRp-w6-chr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="TYl-Cs-hhO"/>
                             <constraint firstItem="kRp-w6-chr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W6w-tZ-U9L"/>
+                            <constraint firstItem="jFR-Uj-3Ns" firstAttribute="top" secondItem="jD6-RD-VE5" secondAttribute="bottom" constant="18" id="YrQ-Ob-xBu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RAG-6w-5WL" secondAttribute="trailing" constant="16" id="fAS-V3-5Uk"/>
                             <constraint firstAttribute="trailing" secondItem="jFR-Uj-3Ns" secondAttribute="trailing" id="kan-Np-Rs4"/>
                             <constraint firstItem="8Se-hz-zDm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nfN-io-RGY"/>
@@ -62,6 +60,7 @@
                         <inset key="largeContentSizeImageInsets" minX="-1" minY="1" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="colorWell" destination="jD6-RD-VE5" id="9VG-Qd-SIf"/>
                         <outlet property="tableView" destination="8Se-hz-zDm" id="a1o-PP-PRi"/>
                     </connections>
                 </viewController>
@@ -81,9 +80,6 @@
                                 <rect key="frame" x="16" y="47" width="54" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="uil_calender"/>
-                                <connections>
-                                    <action selector="dateFilterTodoButtonTapped:" destination="mbU-B3-Ikd" eventType="touchUpInside" id="4GY-6n-T08"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO DO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krn-gO-HFn">
                                 <rect key="frame" x="164.66666666666666" y="57" width="61" height="24"/>
@@ -260,7 +256,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="8"/>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IpA-PV-vkB">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IpA-PV-vkB">
                                 <rect key="frame" x="36" y="435.33333333333331" width="318" height="50"/>
                                 <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -388,8 +384,8 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="8"/>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kse-bE-Ocl">
-                                <rect key="frame" x="47" y="502.33333333333326" width="36.666666666666657" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kse-bE-Ocl">
+                                <rect key="frame" x="46.999999999999993" y="502.33333333333326" width="74.333333333333314" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.63921568630000003" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -404,9 +400,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09V-gu-5HB">
-                                <rect key="frame" x="117.66666666666669" y="611.33333333333337" width="155" height="35"/>
+                                <rect key="frame" x="115.33333333333333" y="611.33333333333337" width="159.33333333333337" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title="  Todo is done">
+                                <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title="  To do is done">
                                     <color key="baseForegroundColor" name="MainColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -467,13 +463,13 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeImage" translatesAutoresizingMaskIntoConstraints="NO" id="whW-Ld-igA">
                                 <rect key="frame" x="12" y="87" width="366" height="266"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hayatını hızlı bir şekilde planlayabilirsin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsh-rQ-UN6">
-                                <rect key="frame" x="34" y="393" width="322" height="57.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can quickly plan your life" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsh-rQ-UN6">
+                                <rect key="frame" x="40" y="393" width="310" height="57.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İş ve yaşam dengenizi kurmak için mükemmel bir fırsat" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khl-dM-QCF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An excellent opportunity to balance work and life" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khl-dM-QCF">
                                 <rect key="frame" x="80" y="623.33333333333337" width="230" height="28.666666666666629"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                 <color key="textColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -487,7 +483,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Devam">
+                                <state key="normal" title="Let's go">
                                     <color key="titleColor" name="MainColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -504,12 +500,12 @@
                             <constraint firstItem="whW-Ld-igA" firstAttribute="leading" secondItem="WGO-CT-nvo" secondAttribute="leading" constant="12" id="31H-pz-J5C"/>
                             <constraint firstItem="whW-Ld-igA" firstAttribute="top" secondItem="WGO-CT-nvo" secondAttribute="top" constant="40" id="3Yw-3F-Mc2"/>
                             <constraint firstItem="wsh-rQ-UN6" firstAttribute="top" secondItem="whW-Ld-igA" secondAttribute="bottom" constant="40" id="3nk-nG-Qvp"/>
-                            <constraint firstItem="wsh-rQ-UN6" firstAttribute="leading" secondItem="WGO-CT-nvo" secondAttribute="leading" constant="34" id="IlU-iA-QPH"/>
+                            <constraint firstItem="wsh-rQ-UN6" firstAttribute="leading" secondItem="WGO-CT-nvo" secondAttribute="leading" constant="40" id="IlU-iA-QPH"/>
                             <constraint firstItem="JXr-KQ-f2E" firstAttribute="top" secondItem="wsh-rQ-UN6" secondAttribute="bottom" constant="60" id="Upp-9z-CJh"/>
                             <constraint firstItem="WGO-CT-nvo" firstAttribute="trailing" secondItem="JXr-KQ-f2E" secondAttribute="trailing" constant="105" id="VXZ-BV-vZD"/>
                             <constraint firstItem="JXr-KQ-f2E" firstAttribute="leading" secondItem="WGO-CT-nvo" secondAttribute="leading" constant="105" id="YUK-xT-9di"/>
                             <constraint firstItem="WGO-CT-nvo" firstAttribute="trailing" secondItem="whW-Ld-igA" secondAttribute="trailing" constant="12" id="Ybf-yw-FYI"/>
-                            <constraint firstAttribute="trailing" secondItem="wsh-rQ-UN6" secondAttribute="trailing" constant="34" id="dcM-jJ-t2w"/>
+                            <constraint firstAttribute="trailing" secondItem="wsh-rQ-UN6" secondAttribute="trailing" constant="40" id="dcM-jJ-t2w"/>
                             <constraint firstItem="Khl-dM-QCF" firstAttribute="leading" secondItem="WGO-CT-nvo" secondAttribute="leading" constant="80" id="kbE-S1-Tue"/>
                             <constraint firstItem="Khl-dM-QCF" firstAttribute="top" secondItem="JXr-KQ-f2E" secondAttribute="bottom" constant="60" id="tiu-qB-hNu"/>
                             <constraint firstItem="WGO-CT-nvo" firstAttribute="trailing" secondItem="Khl-dM-QCF" secondAttribute="trailing" constant="80" id="xX7-ov-ebJ"/>
@@ -572,7 +568,6 @@
         <image name="home" width="30" height="30"/>
         <image name="homeSelected" width="30" height="30"/>
         <image name="line" width="375" height="1.3333333730697632"/>
-        <image name="listButton" width="30" height="30"/>
         <image name="uil_calender" width="30" height="30"/>
         <image name="welcomeImage" width="375" height="266"/>
         <namedColor name="MainColor">
