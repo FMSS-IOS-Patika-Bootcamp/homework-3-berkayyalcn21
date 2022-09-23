@@ -12,7 +12,7 @@
 - You can download and run the project
 
 #### Screens
-<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/welcome.png" width="200" /> 
-<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/firstPage.png" width="200" /> 
-<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/home.png" width="200" /> 
-<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/homeColor.png" width="200" /> 
+<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/welcome.png" width="200" /> <img 
+src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/firstPage.png" width="200" /> <img 
+src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/home.png" width="200" /> <img 
+src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/homeColor.png" width="200" /> 
