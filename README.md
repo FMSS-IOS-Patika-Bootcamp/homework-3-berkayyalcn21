@@ -13,12 +13,12 @@
 - You can download and run the project
 
 #### Screens
-<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/welcome.png" width="210" /> <img 
-src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/firstPage.png" width="210" /> <img 
-src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/home.png" width="210" /> <img 
-src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/homeColor.png" width="210" /> 
+<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/welcome.png" width="200" /> <img 
+src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/firstPage.png" width="200" /> <img 
+src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/home.png" width="200" /> <img 
+src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/homeColor.png" width="200" /> 
 
-<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/home-2.png" width="210" /> <img 
-src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/todos.png" width="210" /> <img 
-src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/addTodo.png" width="210" /> <img 
-src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/detailsTodo.png" width="210" /> 
+<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/home-2.png" width="200" /> <img 
+src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/todos.png" width="200" /> <img 
+src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/addTodo.png" width="200" /> <img 
+src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/detailsTodo.png" width="200" /> 
