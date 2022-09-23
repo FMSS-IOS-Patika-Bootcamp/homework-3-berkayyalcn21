@@ -1,17 +1,18 @@
-# HomWork-3
-3. Ödevimiz
+# FMSS-Homework-3
+
+### 223. FMSS Bilişim iOS Swift Bootcamp - To do list App & API 
+
+![Simulator](https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/appIcon.png)
 
 
-- Tab bar Controller olcak. En az 3 tane Tab olucak. 
-- İlk Tab'de TableView olucak ve bu TableView içerisinde https://jsonplaceholder.typicode.com/ linkindeki post'lar api kullanarak cekilip gösterilicek. ( SADECE URLSESSİON KULLANILICAKTIR.)
-- İkinci Tab'de CollectionView kullanılıcaktır.  https://jsonplaceholder.typicode.com/ linkindeki /photos'lar api kullanarak cekilip gösterilicek.
-- İmageler sadece KingsFisher kütüphanesi kullanılıar gösterilicektir. Başka kütüphane kabul edilmicektir. 
-- Cell yapısı kullanılar collectionView da gösterilicektir.
-- Grit yapısı oluşturularak CollectionView lar gösterilicektir. Aralarında boşluk birakilarak yapılırsa artı puan verilicek
-- Üçüncü tab'de Todo list gösterilicektir. Burdaki listeler CoreData dan alınıcaktır. Bu tab'de bir tane ekle butonu olucaktır.
-- Ekle butonuna basınca Yeni bir sayfaya geçiş yapılıcak ve bu sayfa Todo kaydedilicektir. Kayıt yapıldıktan sonra Todo list ekranına dönüş yapılmalıdır.
-- Yeni eklenen Todo Listenin en başında Gözükmelidir.
-- Todo'ların üstüne tıklanınca Detay sayfasına gidilicek, Bu sayfada Tamamlandı butonu olucak ve bu Butona tıklandığında Todo List sayfasına geri dönüş yapılıcaktır.
-- Tamamlandı butonuna basıldığı zaman, Todo List ekranında ilgili Todo Cellindeki image tick şaretine dönüşücektir.
+#### Description
+- With this application, you can keep your to-do list and read the articles taken from the internet, you can look at photos.
+- The design was made over the Figma application and transferred to the code.
+- Figma App Desing Link: https://www.figma.com/file/HTAHRn74L08YGCSFeo6X7v/To-do-list?node-id=0%3A1
+- You can download and run the project
 
- Arkadaşlar kolay gelsin :)
+#### Screens
+<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/welcome.png" width="200" /> 
+<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/firstPage.png" width="200" /> 
+<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/home.png" width="200" /> 
+<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/homeColor.png" width="200" /> 
