@@ -48,7 +48,7 @@ src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/m
   - Navigation Controller
   
 #### Network
-  - Api
+  - Api : https://jsonplaceholder.typicode.com/
   - CoreData
   
 #### Design Pattern Architecture
