@@ -10,6 +10,7 @@
 - The design was made over the Figma application and transferred to the code.
 - Figma App Desing Link: https://www.figma.com/file/HTAHRn74L08YGCSFeo6X7v/To-do-list?node-id=0%3A1
 - You can change tabBar background color with Color Well
+- if you get an error when you download the application, you can download the library and refresh its files
 - You can download and run the project
 
 #### Screens
