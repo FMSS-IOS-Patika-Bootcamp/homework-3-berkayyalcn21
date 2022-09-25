@@ -28,7 +28,7 @@ src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/m
 src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/gallery-2.png" width="200" />
 
 
-### Tools
+## Tools
 
 #### Swift
   - Delegate
@@ -51,3 +51,6 @@ src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/m
   
 #### Design Pattern Architecture
   - MVVM 
+
+#### Third-party Library
+  - Kingfisher - You can dowload with this link from XCode File - Add Packages : https://github.com/onevcat/Kingfisher
