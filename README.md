@@ -30,18 +30,24 @@ src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/m
 
 ### Tools
 
-- Swift
+#### Swift
   - Delegate
   - POP
   - OOP
   - Date
-  - Api
-  - CoreData
   - High Order Functions
-- UIKit
+  
+#### UIKit
   - CollectionView
   - TableView
   - Color Well
   - Auto Layout
   - TabBar
   - Navigation Controller
+  
+#### Network
+  - Api
+  - CoreData
+  
+#### Design Pattern Architecture
+  - MVVM 
