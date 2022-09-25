@@ -24,6 +24,7 @@ class PostListViewModel {
         model.delegate = self
     }
     
+    // Get data
     func didViewLoad() {
         model.fetchData()
     }
@@ -37,6 +38,7 @@ class PostListViewModel {
 
 private extension PostListViewModel {
     
+    // Model transform
     @discardableResult
     func makeViewBasedModel(_ posts: [Post]) -> [PostCellViewModel] {
         return posts.map { .init(title: $0.title, desc: $0.body)}

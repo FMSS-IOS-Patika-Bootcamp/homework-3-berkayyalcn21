@@ -14,6 +14,7 @@ class WelcomeVC: UIViewController {
         
     }
 
+    // Next page
     @IBAction func goOnButtonTapped(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
         navigationController?.pushViewController(controller, animated: true)

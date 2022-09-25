@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Data transfer protocol
 protocol GallertyVMToViewProtocol: AnyObject {
     
     func didCellItemFetch(_ items: [PhotoCellViewModel])
@@ -21,13 +22,14 @@ class GalleryVM{
         model.delegate = self
     }
     
+    // Fetch data info
     func didViewLoad() {
         model.fetchData()
     }
 }
 
 private extension GalleryVM {
-    
+    // Transform model
     @discardableResult
     func makeViewBasedModel(_ photos: [Photos]) -> [PhotoCellViewModel] {
         return photos.map { .init(url: $0.url)}
@@ -35,7 +37,7 @@ private extension GalleryVM {
 }
 
 extension GalleryVM: GalleryModelToViewModelProtocol {
-    
+    // Send data func
     func didDataFetchProccesFinish(_ isSuccess: Bool) {
         
         if isSuccess {

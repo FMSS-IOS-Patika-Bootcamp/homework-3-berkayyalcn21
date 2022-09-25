@@ -12,6 +12,7 @@ class DetailsTodoVM {
     
     private let model = DetailsTodoModel()
     
+    // Data transfer to Model
     func sendDataUpdate(todo: Todo) {
         model.update(todo: todo)
     }

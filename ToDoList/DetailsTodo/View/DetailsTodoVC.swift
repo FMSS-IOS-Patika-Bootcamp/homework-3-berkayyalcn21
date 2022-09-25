@@ -20,6 +20,7 @@ class DetailsTodoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // If this value is not nil
         if todo != nil {
             titleTextField.text = todo?.todo
             descTextView.text = todo?.desc
@@ -29,14 +30,16 @@ class DetailsTodoVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        // CheckBox true or false control
         checkCompleted()
     }
     
-
+    // Previous page
     @IBAction func backButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
+    // To do is done or not done button
     @IBAction func todoIsDoneButtonTapped(_ sender: Any) {
         
         if todo != nil {
@@ -53,6 +56,7 @@ class DetailsTodoVC: UIViewController {
         }
     }
     
+    // To do is done or not done image settings func
     func checkCompleted() {
         if todo != nil {
             if todo?.isCompleted == true {
@@ -62,5 +66,4 @@ class DetailsTodoVC: UIViewController {
             }
         }
     }
-    
 }

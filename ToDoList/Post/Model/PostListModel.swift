@@ -17,6 +17,7 @@ class PostListModel {
     weak var delegate: PostListModelViewModelProtocol?
     var posts: [Post] = []
     
+    // Get data func
     func fetchData() {
         
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else {

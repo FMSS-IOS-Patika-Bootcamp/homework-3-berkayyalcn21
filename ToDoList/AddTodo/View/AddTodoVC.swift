@@ -37,6 +37,7 @@ class AddTodoVC: UIViewController {
         datePicker?.addTarget(self, action: #selector(showDate), for: .valueChanged)
     }
     
+    // Function that will run when this textField is pressed
     @objc func showDate(uiDatePicker: UIDatePicker) {
         let dateFormat = DateFormatter()
         dateFormat.dateFormat = "dd.MM.yyyy"
@@ -44,14 +45,17 @@ class AddTodoVC: UIViewController {
         dateTextField.text = gotDate
     }
     
+    // For hide keyboard
     @objc func hideKeyboard() {
         view.endEditing(true)
     }
- 
+    
+    // Previous page
     @IBAction func backButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
+    // Save to do func
     @IBAction func saveButtonTapped(_ sender: Any) {
         if titleTextField.text != "" && descTextView.text != "" && dateTextField.text != "" {
             viewModel.sendDataPost(titleTextField.text!, descTextView.text!, dateTextField.text!, false)

@@ -18,22 +18,26 @@ class PostListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // TableView delegate and register settings
         setupUI()
         viewModel.viewDelegate = self
         viewModel.didViewLoad()
         colorWell.addTarget(self, action: #selector(colorChanged), for: .valueChanged)
     }
     
+    // TableView delegate and register func
     func setupUI() {
         tableView.delegate = self
         tableView.dataSource = self
         registerCell()
     }
     
+    // TableView register func
     func registerCell() {
         tableView.register(.init(nibName: "PostListTableViewCell", bundle: nil), forCellReuseIdentifier: "PostListTableViewCell")
     }
     
+    // TabBar color change
     @objc func colorChanged() {
         newColor = colorWell.selectedColor
         let appearance = UITabBarAppearance()
@@ -53,6 +57,7 @@ class PostListViewController: UIViewController {
 
 extension PostListViewController: PostListViewModelViewProtocol {
     
+    // Take data from model
     func didCellItemFetch(_ items: [PostCellViewModel]) {
         self.items = items
         DispatchQueue.main.async {
@@ -71,6 +76,7 @@ extension PostListViewController: PostListViewModelViewProtocol {
 
 extension PostListViewController: UITableViewDelegate {
     
+    // TableView selected row
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didClickItem(at: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
@@ -79,10 +85,12 @@ extension PostListViewController: UITableViewDelegate {
 
 extension PostListViewController: UITableViewDataSource {
     
+    // TableView total row
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
     
+    // TableView cell value settings
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostListTableViewCell") as! PostListTableViewCell
         cell.postTitleLabel.text = items[indexPath.row].title?.capitalized

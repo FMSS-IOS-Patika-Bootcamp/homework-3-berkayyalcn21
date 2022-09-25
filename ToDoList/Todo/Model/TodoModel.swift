@@ -11,6 +11,7 @@ import CoreData
 
 class TodoModel {
     
+    // Fetch data func
     func get() -> [Todo] {
         let fetchRequest: NSFetchRequest<Todo> = Todo.fetchRequest()
         
@@ -28,8 +29,9 @@ class TodoModel {
         }
     }
     
+    // To do delete func
     func delete(indexPath: Int, todos: [Todo]) {
-        var todo = todos
+        let todo = todos
         let context = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
         context.delete(todo[indexPath])
         AppDelegate.sharedAppDelegate.coreDataStack.saveContext()

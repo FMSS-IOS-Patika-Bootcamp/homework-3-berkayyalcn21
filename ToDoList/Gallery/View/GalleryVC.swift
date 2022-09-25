@@ -19,21 +19,25 @@ class GalleryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // CollectionView delegate settings
         setupUI()
         viewModel.viewDelegate = self
         viewModel.didViewLoad()
     }
     
+    // CollectionView delegate and register func
     func setupUI() {
         galleryCollectionView.delegate = self
         galleryCollectionView.dataSource = self
         register()
     }
     
+    // CollectionView register func
     func register() {
         galleryCollectionView.register(.init(nibName: galleryIdentifier, bundle: nil), forCellWithReuseIdentifier: galleryIdentifier)
     }
     
+    // CollectionView specific settings func
     @IBAction func listTypeButtonTapped(_ sender: Any) {
         if listTypeNumber != 4 {
             listTypeNumber += 1
@@ -47,6 +51,7 @@ class GalleryVC: UIViewController {
 
 extension GalleryVC: GallertyVMToViewProtocol {
     
+    // Take data from model
     func didCellItemFetch(_ items: [PhotoCellViewModel]) {
         self.items = items
         DispatchQueue.main.async {
@@ -57,10 +62,12 @@ extension GalleryVC: GallertyVMToViewProtocol {
 
 extension GalleryVC: UICollectionViewDataSource {
     
+    // CollectionView total items
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
     
+    // CollectionView cell value settings
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: galleryIdentifier, for: indexPath) as! GalleryCollectionView
         if let url = items[indexPath.row].url {
@@ -71,6 +78,7 @@ extension GalleryVC: UICollectionViewDataSource {
     }
 }
 
+// CollectionView size settings
 extension GalleryVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

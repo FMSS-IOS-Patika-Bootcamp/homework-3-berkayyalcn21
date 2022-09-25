@@ -9,6 +9,7 @@ import Foundation
 
 
 class DetailsTodoModel {
+    // Update selected to do
     func update(todo: Todo) {
         if todo.isCompleted == true {
             todo.isCompleted = false

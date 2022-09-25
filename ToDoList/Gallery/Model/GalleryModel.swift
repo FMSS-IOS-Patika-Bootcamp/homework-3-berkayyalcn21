@@ -12,11 +12,13 @@ protocol GalleryModelToViewModelProtocol: AnyObject {
     func didDataFetchProccesFinish(_ isSuccess: Bool)
 }
 
+// Database settings
 class GalleryModel {
     
     weak var delegate: GalleryModelToViewModelProtocol?
     var photos: [Photos] = []
     
+    // get data
     func fetchData() {
         
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/photos") else {

@@ -10,6 +10,7 @@ import CoreData
 
 class AddTodoModel {
     
+    // Save to database(CoreData)
     func post(title: String, desc: String, date: String, isCompleted: Bool) {
         
         let managedContext = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
