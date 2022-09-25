@@ -10,6 +10,7 @@
 - The design was made over the Figma application and transferred to the code.
 - Figma App Desing Link: https://www.figma.com/file/HTAHRn74L08YGCSFeo6X7v/To-do-list?node-id=0%3A1
 - You can change tabBar background color with Color Well
+- if you get an error when you download the application, you can download the library and refresh its files
 - You can download and run the project
 
 #### Screens
@@ -28,20 +29,29 @@ src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/m
 src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/gallery-2.png" width="200" />
 
 
-### Tools
+## Tools
 
-- Swift
+#### Swift
   - Delegate
   - POP
   - OOP
   - Date
-  - Api
-  - CoreData
   - High Order Functions
-- UIKit
+  
+#### UIKit
   - CollectionView
   - TableView
   - Color Well
   - Auto Layout
   - TabBar
   - Navigation Controller
+  
+#### Network
+  - Api
+  - CoreData
+  
+#### Design Pattern Architecture
+  - MVVM 
+
+#### Third-party Library
+  - Kingfisher - You can dowload with this link from XCode File - Add Packages : https://github.com/onevcat/Kingfisher
