@@ -19,15 +19,17 @@ class AddTodoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Date picker setting func
         dateTextFieldSettings()
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(gestureRecognizer)
     }
     
+    // Date picker setting
     func dateTextFieldSettings() {
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
-        // Bu versyondan sonrakiler için bunu kullansın demek
+        // Only works in this version
         if #available(iOS 13.4, *) {
             datePicker?.preferredDatePickerStyle = .wheels
         }
