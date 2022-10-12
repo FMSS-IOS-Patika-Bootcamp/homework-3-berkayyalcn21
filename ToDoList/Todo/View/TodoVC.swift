@@ -45,7 +45,6 @@ class TodoVC: UIViewController {
     }
 }
 
-
 extension TodoVC: UITableViewDelegate {
     
     // Transfers to detail page when a value is selected
